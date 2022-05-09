@@ -74,12 +74,12 @@ const CardWeather = () => {
                       <p>{cord.name} - {cord.sys?.country}</p>
                       <p>{dateFormat}</p>
                   </article>
-                  <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`}></img>
+                  <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt='wather'></img>
                 </div>
 
                 <div className='temperature'>
                   <p> <b>Temperature:  </b>{isCelcius ?  `${((weather.main?.temp)-273.15).toFixed(2)} Celcius` : `${(((weather.main?.temp) - 273.15) * 9/5 + 32).toFixed(2)} Farenheit`}</p>
-                  <img src={`https://cdn-icons-png.flaticon.com/512/2622/2622386.png`} onClick={changeUnit} className="thermo"  title='°C/°F'/>
+                  <img src={`https://cdn-icons-png.flaticon.com/512/2622/2622386.png`} onClick={changeUnit} className="thermo"  title='°C/°F' alt='themperature'/>
                 </div>
 
             </div>
