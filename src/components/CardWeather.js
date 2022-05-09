@@ -3,15 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Clock from "./Clock";
 
 
-
-
-
 const CardWeather = () => {
     
    
     const [weather, setWeather] = useState({})   
     const [isCelcius,setIsCelcius] = useState(true)
-    const [cord, setCord] = useState({});
+    const [cord] = useState({});
 
 
   useEffect(() => {
