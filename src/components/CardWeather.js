@@ -9,13 +9,7 @@ import Clock from "./Clock";
 const CardWeather = () => {
     
    
-    const [weather, setWeather] = useState({})
-    const [city, setCity] = useState({})
-    const [country, setCountry] = useState({})
-    const [clouds, setClouds] = useState ({})
-    const [wind, setWind] = useState(0)
-    const [pressure, setPressure] = useState(0)   
-    const [temperature, setTemperature]= useState(0)
+    const [weather, setWeather] = useState({})   
     const [isCelcius,setIsCelcius] = useState(true)
     const [cord, setCord] = useState({});
 
@@ -33,12 +27,8 @@ const CardWeather = () => {
         .then(res => 
             {
                 setWeather(res.data)
-                setCity(res.data.name)
-                setCountry(res.data.sys.country)
-                setClouds(res.data.weather?.[0].description)
-                setWind(res.data.wind.speed)
-                setTemperature(res.data.main.temp)
-                setPressure(res.data.main.pressure)
+                
+                
             });
     };
 
